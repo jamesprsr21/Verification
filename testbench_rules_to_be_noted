@@ -1,3 +1,4 @@
 1. include "uvm_maros.svh"
   import uvm_pkg::*;
  inside the module top. Other wise it won't able to call run_test();
+2. All the tb_components classes should be inside the top module only.
