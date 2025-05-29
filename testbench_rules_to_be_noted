@@ -1,5 +1,11 @@
 1. include "uvm_maros.svh"
   import uvm_pkg::*;
  inside the module top. Other wise it won't able to call run_test();
+
 2. All the tb_components classes should be inside the top module only.
+  there are many ways you can write, for eg.
+  a. You can directly write tb_component classes inside the top module 
+  b. You can write in separate files, and then include all the class files inside the module
+  c. You can include all the class files in package,and then import the package inside the top module.
+
 3. write uvm_top.print_topology in test class(top hierarchy) in end_of_elaboration_phase.
