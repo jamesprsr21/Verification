@@ -8,4 +8,9 @@
   b. You can write in separate files, and then include all the class files inside the module
   c. You can include all the class files in package,and then import the package inside the top module.
 
-3. write uvm_top.print_topology in test class(top hierarchy) in end_of_elaboration_phase.
+3. Write uvm_top.print_topology in test class(top hierarchy) in end_of_elaboration_phase.
+
+4. Always make sure the tb class hierarchy is in proper sequence.
+   like first write the lower level classes then to top level classes. eg driver,monitor -> then agent ->env -> then test
+ Otherwise it will through an error: 
+# Unrecognized declaration ‘class_name' could be an unsupported keyword, a spelling mistake or missing instance port list ‘()’ [SystemVerilog]. Geting this error
