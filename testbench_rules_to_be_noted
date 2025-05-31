@@ -16,3 +16,7 @@ Note: Always start writing testbench from the tb Top module and then top/upper h
    like first write the lower level classes then to top level classes. eg driver,monitor -> then agent ->env -> then test
  Otherwise it will through an error: 
 # Unrecognized declaration ‘class_name' could be an unsupported keyword, a spelling mistake or missing instance port list ‘()’ [SystemVerilog]. Geting this error
+
+5. So, start writing testbench Top_module->test class ->env class -> agent -> driver ->monitor -> sequencer 
+  First print the Topology, then start writing the Transaction classes. Then drive the sequence from the driver and then capture the transactions in Monitor from the DUT.
+ Then send the transactions from Monitor to the scoreboard. Then write the reference model if required. Or else write the compare logic in the scoreboard.
